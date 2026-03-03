@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <style>
+        body { font-family: Arial; max-width: 600px; margin: 40px auto; }
+        input, button { padding: 8px; margin: 5px 0; width: 100%; }
+        .task { display: flex; justify-content: space-between; margin: 5px 0; }
+        .hidden { display: none; }
+        .box { border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; }
+        h2 { margin-top: 0; }
+    </style>
+</head>
+<body>
+   <!-- ================= REGISTER SECTION ================= -->
+
+<div class="box">
+<h2>Create New User</h2>
+
+<input id="reg_email" placeholder="Email">
+<input id="reg_password" type="password" placeholder="Password (min 6 chars)">
+<button onclick="register()">Register</button>
+
+</div>
+
+<!-- ================= LOGIN SECTION ================= -->
+
+<div class="box">
+<h2>Login</h2>
+
+<input id="login_email" placeholder="Email">
+<input id="login_password" type="password" placeholder="Password">
+<button onclick="login()">Login</button>
+
+</div>
+
+<!-- ================= TASK SECTION ================= -->
+
+<div id="taskSection" class="hidden box">
+
+<h2>Create Task</h2>
+
+<input id="title" placeholder="Task title">
+<input id="description" placeholder="Task description">
+<button onclick="createTask()">Add Task</button>
+
+<h3>Your Tasks</h3>
+<div id="taskList"></div>
+
+<button onclick="logout()">Logout</button>
+
+</div>
+    <script src="../scripts/index.js"></script>
+</body>
+</html>
